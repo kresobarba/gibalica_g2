@@ -18,3 +18,12 @@ In order to work with the project, you need to download the MediaPipe libraries 
 - Clone this repository and navigate to the GibalicaG2 subfolder
 - Download .zip from this link [GibalicaG2Assets_Packages.zip]().
 - Extract Assets and Packages from .zip into the GibalicaG2 folder, merge with existing Assets and Packages folders.
+
+------------------------------------------------
+
+## Project tracker
+You can check out the project tracker by going [here](https://github.com/users/kresobarba/projects/1/views/1)
+
+------------------------------------------------
+
+Many thanks to the [homuler's MediaPipeUnityPlugin](https://github.com/homuler/MediaPipeUnityPlugin)
