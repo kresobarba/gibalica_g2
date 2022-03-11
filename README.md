@@ -16,7 +16,7 @@ git clone https://github.com/kresobarba/gibalica_g2.git
 In order to work with the project, you need to download the MediaPipe libraries that are built and distributed separately because of their large file size:
 
 - Clone this repository and navigate to the GibalicaG2 subfolder
-- Download .zip from this link [GibalicaG2Assets_Packages.zip]().
+- Download .zip from this link [GibalicaG2Assets_Packages.zip](https://drive.google.com/file/d/1fWA2DUBxoXQvR8ZQQCGqmrlm0GveiHMN/view?usp=sharing).
 - Extract Assets and Packages from .zip into the GibalicaG2 folder, merge with existing Assets and Packages folders.
 
 ------------------------------------------------
