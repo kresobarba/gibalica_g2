@@ -5,4 +5,11 @@ Gibalica is a part of the INNOSID Erasmus+ Valencia Hackaton, and is intended to
 
 [Find more on Gibalica and INNOSID here](https://sociallab.fer.hr/innosid/valencia-2022-hackathon/case-studies/gibalica/)
 
-This project requires Unity 2020.3.30f1 LTS
+------------------------------------------------
+## Getting started
+### This project requires Unity 2020.3.30f1 LTS
+
+In order to work with the project, you need to download the MediaPipe libraries that are built and distributed separately because of their large size:
+
+- Download .zip from this link [GibalicaG2Assets_Packages.zip]().
+- Extract Assets and Packages from .zip into the GibalicaG2folder, merge with existing Assets and Packages folders.
