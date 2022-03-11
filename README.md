@@ -9,7 +9,12 @@ Gibalica is a part of the INNOSID Erasmus+ Valencia Hackaton, and is intended to
 ## Getting started
 ### This project requires Unity 2020.3.30f1 LTS
 
+'''
+git clone https://github.com/kresobarba/gibalica_g2.git
+'''
+
 In order to work with the project, you need to download the MediaPipe libraries that are built and distributed separately because of their large size:
 
+- Clone this repository and navigate to the GibalicaG2 subfolder
 - Download .zip from this link [GibalicaG2Assets_Packages.zip]().
-- Extract Assets and Packages from .zip into the GibalicaG2folder, merge with existing Assets and Packages folders.
+- Extract Assets and Packages from .zip into the GibalicaG2 folder, merge with existing Assets and Packages folders.
