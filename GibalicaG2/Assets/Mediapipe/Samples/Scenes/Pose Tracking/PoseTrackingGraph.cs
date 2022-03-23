@@ -56,6 +56,11 @@ namespace Mediapipe.Unity.PoseTracking
         _poseWorldLandmarksStream.AddListener(PoseWorldLandmarksCallback).AssertOk();
         _roiFromLandmarksStream.AddListener(RoiFromLandmarksCallback).AssertOk();
       }
+
+      if (UnityEngine.Application.platform == UnityEngine.RuntimePlatform.WindowsPlayer)
+      {
+        modelComplexity = ModelComplexity.Heavy;
+      }
       StartRun(BuildSidePacket(imageSource));
     }
 
