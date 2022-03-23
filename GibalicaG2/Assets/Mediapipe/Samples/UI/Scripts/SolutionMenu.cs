@@ -23,10 +23,11 @@ namespace Mediapipe.Unity.UI
     private void Start()
     {
       _solutionGrid = transform.Find(_GridPath);
-
+      
       var solutionCount = SceneManager.sceneCountInBuildSettings;
       Transform currentRow = null;
 
+      
       for (var i = 1; i < solutionCount; i++)
       { // skip the first scene (i.e. Start Scene)
         if (i % 2 == 1)
@@ -39,7 +40,7 @@ namespace Mediapipe.Unity.UI
         var buildIndex = i;
         button.transform.GetComponentInChildren<Text>().text = GetSceneNameByBuildIndex(buildIndex);
         button.onClick.AddListener(() => { var _ = StartCoroutine(LoadSceneAsync(buildIndex)); });
-      }
+      }  
 
       if (solutionCount % 2 == 0)
       { // (solutionCount - 1) % 2 == 1

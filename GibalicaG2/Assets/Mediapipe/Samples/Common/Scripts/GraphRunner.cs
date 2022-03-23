@@ -38,7 +38,7 @@ namespace Mediapipe.Unity
     private static readonly GlobalInstanceTable<int, GraphRunner> _InstanceTable = new GlobalInstanceTable<int, GraphRunner>(5);
     private static readonly Dictionary<IntPtr, int> _NameTable = new Dictionary<IntPtr, int>();
 
-    protected RunningMode runningMode { get; private set; } = RunningMode.Async;
+    protected RunningMode runningMode { get; private set; } = RunningMode.Sync; //TODO: Changed Async to Sync because the tracking sticks better. Have to test on more devices tho.
     private bool _isRunning = false;
 
     public InferenceMode inferenceMode => configType == ConfigType.CPU ? InferenceMode.CPU : InferenceMode.GPU;

@@ -20,4 +20,9 @@ public class UIManager : MonoBehaviour
   {
     SceneManager.LoadScene("WelcomeScene");
   }
+
+  public void LoadTracker()
+  {
+    SceneManager.LoadScene("Start Scene");
+  }
 }
