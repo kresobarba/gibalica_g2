@@ -7,12 +7,13 @@ public class SaveData : MonoBehaviour
 {
   [SerializeField] 
   public static SettingsFile settingsFile = new SettingsFile();
-  public static Canvas canvas;
   public static Font normalFont;
   public static Font specialFont;
 
   public void Start()
    {
+    normalFont = Resources.Load("Fonts/FredokaOne-Regular") as Font;
+    specialFont = Resources.Load("Fonts/Raleway-Bold") as Font;
     ReadFromJson();
    }
 
@@ -24,35 +25,56 @@ public class SaveData : MonoBehaviour
 
   public static void ReadFromJson()
   {
-    settingsFile = JsonUtility.FromJson<SettingsFile>(Application.persistentDataPath + "/Settings.json");
+    if (System.IO.File.Exists(Application.persistentDataPath + "/Settings.json"))
+    {
+      string savedSettings = System.IO.File.ReadAllText(Application.persistentDataPath + "/Settings.json");
+      var settingsFilgge = JsonUtility.FromJson<SettingsFile>(savedSettings);
+    }
 
+    GameObject canvas = GameObject.Find("Canvas");
     for (int i = 0; i < canvas.transform.childCount; i++)
     {
       GameObject child = canvas.transform.GetChild(i).gameObject;
-      if (child.name.EndsWith("Button"))
+
+      if (child.GetComponent<Text>() != null || child.name.EndsWith("Button"))
       {
-        Text targetText = child.GetComponent<Text>();
-        targetText.font = targetText.font == normalFont ? specialFont : normalFont;
+        Text targetText;
+        if (child.GetComponent<Text>() == null)
+        {
+          targetText = child.transform.GetChild(0).GetComponent<Text>();
+        } else
+        { 
+          targetText = child.GetComponent<Text>();
+        }
+
+        if (settingsFile.specialFont) {
+           targetText.font = specialFont;
+        } else {
+           targetText.font = normalFont;
+        }
       }
     }
   }
 
   public static void ChangeTheme()
   {
-    settingsFile.darkTheme = true ? false : true;
+    settingsFile.darkTheme = settingsFile.darkTheme == true ? false : true;
     SaveIntoJson();
+    ReadFromJson();
   }
 
   public static void ChangeFont()
   {
-    settingsFile.specialFont = true ? false : true;
+    settingsFile.specialFont = settingsFile.specialFont == true ? false : true;
     SaveIntoJson();
+    ReadFromJson();
   }
 
   public static void ChangeSound()
   {
-    settingsFile.soundOff = true ? false : true;
+    settingsFile.soundOff = settingsFile.darkTheme == true ? false : true;
     SaveIntoJson();
+    ReadFromJson();
   }
 }
 

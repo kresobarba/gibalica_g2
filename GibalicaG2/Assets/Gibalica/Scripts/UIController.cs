@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
@@ -12,7 +12,7 @@ public class UIController : MonoBehaviour
     {
         _modeResolver = FindObjectOfType<UIModeResolver>();
         _uiMode = GetComponentInChildren<Button>();
-        _uiMode.image.sprite = UIModeImages[PrefsHolder.IsDarkMode() ? 0 : 1];
+      //  _uiMode.image.sprite = UIModeImages[PrefsHolder.IsDarkMode() ? 0 : 1];
     }
 
     public void ToggleUIMode()
