@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class UIModeResolver : MonoBehaviour
@@ -6,35 +6,38 @@ public class UIModeResolver : MonoBehaviour
     private const float DarkGrey = 0.07f;
     private readonly Color _darkGrey = new Color(DarkGrey, DarkGrey, DarkGrey, 1);
 
-    private void Awake()
-    {
-        ResolveDarkMode();
-    }
-
-    private void ResolveDarkMode()
-    {
-        if (!PrefsHolder.IsDarkMode()) return;
-
-        ResolveMode();
-    }
-
-    public void ResolveMode()
+    public void ResolveMode(bool darkTheme)
     {
         foreach (var text in GetComponentsInChildren<Text>(true))
         {
-            text.color = text.color == Color.white ? _darkGrey : Color.white;
+            if(darkTheme)
+            {
+              text.color = Color.white;
+            } else
+            {
+              text.color = _darkGrey;
+            }
+            
         }
 
         foreach (var image in GetComponentsInChildren<Image>(true))
         {
+    
             var uiModeElement = image.GetComponent<UIModeElement>();
             if (uiModeElement)
             {
-                uiModeElement.ResolveImage();
+                uiModeElement.ResolveImage(darkTheme);
             }
-            else
+            else if (image.name.EndsWith("Button"))
             {
-                image.color = image.color == Color.white ? _darkGrey : Color.white;
+              if (darkTheme)
+              {
+                image.color = _darkGrey;
+              }
+              else
+              {
+                image.color = Color.white;
+              }
             }
         }
     }

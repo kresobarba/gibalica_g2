@@ -31,6 +31,11 @@ public class SaveData : MonoBehaviour
       var settingsFilgge = JsonUtility.FromJson<SettingsFile>(savedSettings);
     }
 
+    Update();
+  }
+
+  private static void Update()
+  {
     GameObject canvas = GameObject.Find("Canvas");
     for (int i = 0; i < canvas.transform.childCount; i++)
     {
@@ -41,17 +46,34 @@ public class SaveData : MonoBehaviour
         Text targetText;
         if (child.GetComponent<Text>() == null)
         {
+          if (child.transform.GetChild(0).GetComponent<Text>() == null)
+          {
+            continue;
+          }
           targetText = child.transform.GetChild(0).GetComponent<Text>();
-        } else
-        { 
+        }
+        else
+        {
           targetText = child.GetComponent<Text>();
         }
 
-        if (settingsFile.specialFont) {
-           targetText.font = specialFont;
-        } else {
-           targetText.font = normalFont;
+        if (settingsFile.specialFont)
+        {
+          targetText.font = specialFont;
         }
+        else
+        {
+          targetText.font = normalFont;
+        }
+      }
+
+      UIModeResolver modeResolver = canvas.GetComponent<UIModeResolver>();
+      if (settingsFile.darkTheme)
+      {
+        modeResolver.ResolveMode(true);
+      } else
+      {
+        modeResolver.ResolveMode(false);
       }
     }
   }

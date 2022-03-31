@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class UIModeElement : MonoBehaviour
@@ -6,11 +6,18 @@ public class UIModeElement : MonoBehaviour
     public Sprite LightModeSprite;
     public Sprite DarkModeSprite;
 
-    public void ResolveImage()
+  public void ResolveImage(bool darkTheme)
+  {
+    if (LightModeSprite)
     {
-        if (LightModeSprite)
-        {
-            GetComponent<Image>().sprite = PrefsHolder.IsDarkMode() ? DarkModeSprite : LightModeSprite;
-        }
+      if (darkTheme)
+      {
+        GetComponent<Image>().sprite = DarkModeSprite;
+      }
+      else
+      {
+        GetComponent<Image>().sprite = LightModeSprite;
+      }
     }
+  }
 }
