@@ -392,9 +392,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: LoadAboutUs
+      - m_Target: {fileID: 1070968483}
+        m_TargetAssemblyTypeName: SaveData, Assembly-CSharp
+        m_MethodName: ChangeSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -492,8 +492,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db749f2e1fd2314b8bcc1ec8bfa16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightModeSprite: {fileID: 21300000, guid: 345530df157cf824e93b03ab0194f9b6, type: 3}
-  DarkModeSprite: {fileID: 21300000, guid: 236323701b342194ba7273cafef2234e, type: 3}
+  LightModeSprite:
+  - {fileID: 21300000, guid: 345530df157cf824e93b03ab0194f9b6, type: 3}
+  DarkModeSprite:
+  - {fileID: 21300000, guid: 236323701b342194ba7273cafef2234e, type: 3}
 --- !u!114 &485008857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,8 +622,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db749f2e1fd2314b8bcc1ec8bfa16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightModeSprite: {fileID: 21300000, guid: e0a7d9a1e7162c848a637d094afb9417, type: 3}
-  DarkModeSprite: {fileID: 21300000, guid: caca9ce8880652d468b3be1faa00ac3a, type: 3}
+  LightModeSprite:
+  - {fileID: 21300000, guid: e0a7d9a1e7162c848a637d094afb9417, type: 3}
+  DarkModeSprite:
+  - {fileID: 21300000, guid: caca9ce8880652d468b3be1faa00ac3a, type: 3}
 --- !u!1 &531563542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,8 +1196,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db749f2e1fd2314b8bcc1ec8bfa16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightModeSprite: {fileID: 21300000, guid: c2cde96360d81e34b873c73d0bd6b1ef, type: 3}
-  DarkModeSprite: {fileID: 21300000, guid: 884396afd9109d6499696dd2c962cc6d, type: 3}
+  LightModeSprite:
+  - {fileID: 21300000, guid: c2cde96360d81e34b873c73d0bd6b1ef, type: 3}
+  - {fileID: 21300000, guid: bdb810ef7c2c3f84192ef90d842608f4, type: 3}
+  DarkModeSprite:
+  - {fileID: 21300000, guid: 884396afd9109d6499696dd2c962cc6d, type: 3}
+  - {fileID: 21300000, guid: 178f1560d5fe7174fbd9117a7d061edc, type: 3}
 --- !u!1 &1070968480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,8 +1346,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db749f2e1fd2314b8bcc1ec8bfa16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightModeSprite: {fileID: 21300000, guid: 1b4ee214ac6beb847bcbf36dd841edc8, type: 3}
-  DarkModeSprite: {fileID: 21300000, guid: 846c48931f89f4345b03958e9871be85, type: 3}
+  LightModeSprite:
+  - {fileID: 21300000, guid: 1b4ee214ac6beb847bcbf36dd841edc8, type: 3}
+  DarkModeSprite:
+  - {fileID: 21300000, guid: 846c48931f89f4345b03958e9871be85, type: 3}
 --- !u!1 &1485765020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,8 +1725,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db749f2e1fd2314b8bcc1ec8bfa16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightModeSprite: {fileID: 21300000, guid: 06dafc577a6d2854695d52a9f4f0bd6d, type: 3}
-  DarkModeSprite: {fileID: 21300000, guid: d4d932cc0343dde4cbe6790ed3254005, type: 3}
+  LightModeSprite:
+  - {fileID: 21300000, guid: 06dafc577a6d2854695d52a9f4f0bd6d, type: 3}
+  DarkModeSprite:
+  - {fileID: 21300000, guid: d4d932cc0343dde4cbe6790ed3254005, type: 3}
 --- !u!1 &1692467783
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ public class SaveData : MonoBehaviour
     if (System.IO.File.Exists(Application.persistentDataPath + "/Settings.json"))
     {
       string savedSettings = System.IO.File.ReadAllText(Application.persistentDataPath + "/Settings.json");
-      var settingsFilgge = JsonUtility.FromJson<SettingsFile>(savedSettings);
+      settingsFile = JsonUtility.FromJson<SettingsFile>(savedSettings);
     }
 
     Update();
@@ -36,6 +36,7 @@ public class SaveData : MonoBehaviour
 
   private static void Update()
   {
+    int soundNum = settingsFile.soundOff == false ? 0 : 1;
     GameObject canvas = GameObject.Find("Canvas");
     for (int i = 0; i < canvas.transform.childCount; i++)
     {
@@ -70,10 +71,10 @@ public class SaveData : MonoBehaviour
       UIModeResolver modeResolver = canvas.GetComponent<UIModeResolver>();
       if (settingsFile.darkTheme)
       {
-        modeResolver.ResolveMode(true);
+        modeResolver.ResolveMode(true, settingsFile);
       } else
       {
-        modeResolver.ResolveMode(false);
+        modeResolver.ResolveMode(false, settingsFile);
       }
     }
   }
@@ -82,21 +83,21 @@ public class SaveData : MonoBehaviour
   {
     settingsFile.darkTheme = settingsFile.darkTheme == true ? false : true;
     SaveIntoJson();
-    ReadFromJson();
+    Update();
   }
 
   public static void ChangeFont()
   {
     settingsFile.specialFont = settingsFile.specialFont == true ? false : true;
     SaveIntoJson();
-    ReadFromJson();
+    Update();
   }
 
   public static void ChangeSound()
   {
-    settingsFile.soundOff = settingsFile.darkTheme == true ? false : true;
+    settingsFile.soundOff = settingsFile.soundOff == true ? false : true;
     SaveIntoJson();
-    ReadFromJson();
+    Update();
   }
 }
 
