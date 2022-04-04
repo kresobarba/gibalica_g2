@@ -7,7 +7,12 @@ Gibalica is a part of the INNOSID Erasmus+ Valencia Hackaton, and is intended to
 
 ------------------------------------------------
 ## Getting started
-### This project requires Unity 2020.3.30f1 LTS
+
+### Prerequisites
+
+This project requires Unity 2020.3.30f1 LTS
+
+### Instalation
 
 ```
 git clone https://github.com/kresobarba/gibalica_g2.git
@@ -19,11 +24,24 @@ In order to work with the project, you need to download the MediaPipe libraries 
 - Download .zip from this link [GibalicaG2Assets_Packages.zip](https://drive.google.com/file/d/1fWA2DUBxoXQvR8ZQQCGqmrlm0GveiHMN/view?usp=sharing).
 - Extract Assets and Packages from .zip into the GibalicaG2 folder, merge with existing Assets and Packages folders.
 
-------------------------------------------------
+### Starting the application
 
-## Project tracker
-You can check out the project tracker by going [here](https://github.com/users/kresobarba/projects/1/views/1)
+To start the application on Windows, simply run the .exe file. To run the application on Android mobile phone, install the .apk file using File Manager.
 
-------------------------------------------------
+
+## Technology
+
+- Unity 2020.3.30f1 LTS 
+- C# - used for writing scripts
+- MediaPipe libraries - used for pose detection
+
+## Team
+
+- Krešimir Barbarić - Project Manager & Developer
+- Jelena Nemčić - Developer
+- Diego Giménez - Tester
+
+## Acknowledgements
 
 Many thanks to the [homuler's MediaPipeUnityPlugin](https://github.com/homuler/MediaPipeUnityPlugin)
+

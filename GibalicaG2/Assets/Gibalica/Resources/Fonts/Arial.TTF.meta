@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d147c3f84c5442747b7ceb8cea264752
+guid: e4dbb71de381aa444936dcd8325199ba
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Raleway
+  - Arial
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

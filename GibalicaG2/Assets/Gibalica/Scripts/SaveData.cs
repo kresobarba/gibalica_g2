@@ -13,7 +13,7 @@ public class SaveData : MonoBehaviour
   public void Start()
    {
     normalFont = Resources.Load("Fonts/FredokaOne-Regular") as Font;
-    specialFont = Resources.Load("Fonts/Raleway-Bold") as Font;
+    specialFont = Resources.Load("Fonts/Arial") as Font;
     ReadFromJson();
    }
 
@@ -93,9 +93,10 @@ public class SaveData : MonoBehaviour
     Update();
   }
 
-  public static void ChangeSound()
+  public void ChangeSound()
   {
     settingsFile.soundOff = settingsFile.soundOff == true ? false : true;
+    AudioListener.pause = !AudioListener.pause;
     SaveIntoJson();
     Update();
   }
