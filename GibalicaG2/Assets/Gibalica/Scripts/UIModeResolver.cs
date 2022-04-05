@@ -6,7 +6,7 @@ public class UIModeResolver : MonoBehaviour
     private const float DarkGrey = 0.07f;
     private readonly Color _darkGrey = new Color(DarkGrey, DarkGrey, DarkGrey, 1);
 
-    public void ResolveMode(bool darkTheme)
+    public void ResolveMode(bool darkTheme, SettingsFile settings)
     {
         foreach (var text in GetComponentsInChildren<Text>(true))
         {
@@ -26,7 +26,12 @@ public class UIModeResolver : MonoBehaviour
             var uiModeElement = image.GetComponent<UIModeElement>();
             if (uiModeElement)
             {
-                uiModeElement.ResolveImage(darkTheme);
+                int num = 0;
+                if (settings.soundOff == true)
+                {
+                    num = 1;
+                }  
+                uiModeElement.ResolveImage(darkTheme, num);
             }
             else if (image.name.EndsWith("Button"))
             {

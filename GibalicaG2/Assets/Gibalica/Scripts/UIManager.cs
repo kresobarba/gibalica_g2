@@ -23,7 +23,18 @@ public class UIManager : MonoBehaviour
 
   public void LoadTracker()
   {
-    SceneManager.LoadScene("Start Scene");
+    SceneManager.LoadScene("Pose Tracking");
+  }
+
+  public void LoadFreeMode()
+  {
+    SceneManager.LoadScene("FreeModeScene");
+  }
+
+  public void LoadDayNight()
+  {
+    //SceneManager.LoadScene("DayNightScene");
+    SceneManager.LoadScene("FreeModeScene");
   }
 
 }

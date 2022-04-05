@@ -105,8 +105,8 @@ namespace Mediapipe.Unity
       DontDestroyOnLoad(gameObject);
       isFinished = true;
 
-      Logger.LogInfo(_TAG, "Loading Pose Tracking scene...");
-      var sceneLoadReq = SceneManager.LoadSceneAsync("Pose Tracking");
+      Logger.LogInfo(_TAG, "Loading Welcome scene...");
+      var sceneLoadReq = SceneManager.LoadSceneAsync("WelcomeScene");
       yield return new WaitUntil(() => sceneLoadReq.isDone);
     }
 
