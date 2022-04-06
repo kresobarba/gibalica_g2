@@ -55,8 +55,12 @@ namespace Mediapipe.Unity
 
       if (debugLog != null)
       {
-        string log = $"Diff L- {diff_l} R- {diff_r}" + "\nHIPS " + "\nR: " + currentTarget[RIGHT_HIP].ToString() + "\nL: " + currentTarget[LEFT_HIP].ToString(); ;
-        debugLog.text = log;
+
+        string message = string.Format("Diff\nL:{8:f4} Diff R:{8:f4}\nHIPS\nL:{8:f4} R:{8:f4}\nKNEES\nL:{8:f4} R:{8:f4}\nANKLES\nL:{8:f4} R:{8:f4}",
+        diff_l, diff_r, currentTarget[LEFT_HIP].Y, currentTarget[RIGHT_HIP].Y, currentTarget[LEFT_KNEE].Y, currentTarget[RIGHT_KNEE].Y, currentTarget[LEFT_ANKLE].Y);
+
+        //string log = $"Diff L- {diff_l} R- {diff_r}" + "\nHIPS " + "\nR: " + currentTarget[RIGHT_HIP].ToString() + "\nL: " + currentTarget[LEFT_HIP].ToString(); ;
+        debugLog.text = message;
       }
 
 

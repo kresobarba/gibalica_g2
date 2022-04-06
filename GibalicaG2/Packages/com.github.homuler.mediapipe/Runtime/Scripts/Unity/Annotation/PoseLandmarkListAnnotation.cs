@@ -18,7 +18,7 @@ namespace Mediapipe.Unity
     [SerializeField] private Color _leftLandmarkColor = Color.green;
     [SerializeField] private Color _rightLandmarkColor = Color.green;
 
-    [SerializeField] public Mediapipe.Unity.SquatMeter _squatMeter;
+    //[SerializeField] public Mediapipe.Unity.SquatMeter _squatMeter;
 
     [Flags]
     public enum BodyParts : short
