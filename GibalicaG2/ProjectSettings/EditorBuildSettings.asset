@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Gibalica/Scenes/ExerciseScene.unity
     guid: e3fbec6d87112874e99f50798af46cb9
   - enabled: 1
+    path: Assets/Gibalica/Scenes/ScoreScene.unity
+    guid: 435ba9be3cd65244ba0baf171fadbf96
+  - enabled: 1
     path: Assets/Mediapipe/Samples/Scenes/Pose Tracking/Pose Tracking.unity
     guid: a4964d5b8866fb3d8bd4c715728200c8
   - enabled: 1
