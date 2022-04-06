@@ -59,7 +59,7 @@ namespace Mediapipe.Unity.PoseTracking
 
       if (UnityEngine.Application.platform == UnityEngine.RuntimePlatform.WindowsPlayer)
       {
-        modelComplexity = ModelComplexity.Heavy;
+        modelComplexity = ModelComplexity.Full;
       }
       StartRun(BuildSidePacket(imageSource));
     }

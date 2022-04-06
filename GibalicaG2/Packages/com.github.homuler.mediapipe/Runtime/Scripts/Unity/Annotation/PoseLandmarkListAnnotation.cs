@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Mediapipe.Unity;
 
 namespace Mediapipe.Unity
 {
@@ -16,6 +17,8 @@ namespace Mediapipe.Unity
     [SerializeField] private ConnectionListAnnotation _connectionListAnnotation;
     [SerializeField] private Color _leftLandmarkColor = Color.green;
     [SerializeField] private Color _rightLandmarkColor = Color.green;
+
+    [SerializeField] public Mediapipe.Unity.SquatMeter _squatMeter;
 
     [Flags]
     public enum BodyParts : short

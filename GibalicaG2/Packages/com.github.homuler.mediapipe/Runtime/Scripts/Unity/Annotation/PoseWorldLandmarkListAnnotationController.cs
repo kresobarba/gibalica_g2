@@ -6,6 +6,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using Mediapipe.Unity;
 
 namespace Mediapipe.Unity
 {
@@ -14,6 +15,8 @@ namespace Mediapipe.Unity
     [SerializeField] private float _hipHeightMeter = 0.9f;
     [SerializeField] private Vector3 _scale = new Vector3(100, 100, 100);
     [SerializeField] private bool _visualizeZ = true;
+    //TODO: Fix referencing
+    //[SerializeField] private Mediapipe.Unity.SquatMeter _squatMeter = null;
 
     private IList<Landmark> _currentTarget;
 
@@ -48,6 +51,7 @@ namespace Mediapipe.Unity
     {
       isStale = false;
       annotation.Draw(_currentTarget, _scale, _visualizeZ);
+      //squatMeter?.Measure(_currentTarget, _scale);
     }
   }
 }

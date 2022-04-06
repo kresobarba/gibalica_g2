@@ -15,6 +15,9 @@ namespace Mediapipe.Unity
 
     private IList<NormalizedLandmark> _currentTarget;
 
+    //TODO: Fix referencing
+    [SerializeField] private Mediapipe.Unity.SquatMeter _squatMeter = null;
+
     public void DrawNow(IList<NormalizedLandmark> target)
     {
       _currentTarget = target;
@@ -40,6 +43,7 @@ namespace Mediapipe.Unity
     {
       isStale = false;
       annotation.Draw(_currentTarget, _visualizeZ);
+      _squatMeter.Measure(_currentTarget);
     }
   }
 }

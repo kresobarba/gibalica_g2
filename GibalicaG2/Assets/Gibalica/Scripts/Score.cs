@@ -5,10 +5,15 @@ using System;
 
 public class Score : MonoBehaviour
 {
-  private static DateTime date = DateTime.Now;
-  private int duration = 0;
-  private static int score = 0;
-  private static int type = 0;
+
+
+  public DateTime date = DateTime.Now;
+  public int duration = 0;
+  public int score = 0;
+  public int type = 0;
+
+
+  //squatMeter.OnRep
 
   public void IncreaseScore()
   {
