@@ -32,6 +32,11 @@ public class UIManager : MonoBehaviour
     LoadDayNight();
   }
 
+  public void LoadTimedMode()
+  {
+    LoadDayNight();
+  }
+
   public void LoadDayNight()
   {
     SceneManager.LoadScene("DayNightScene");
