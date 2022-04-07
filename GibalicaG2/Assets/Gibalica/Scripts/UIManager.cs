@@ -35,13 +35,17 @@ public class UIManager : MonoBehaviour
   public void LoadDayNight()
   {
     SceneManager.LoadScene("DayNightScene");
-    //SceneManager.LoadScene("FreeModeScene");
   }
 
   public void BackToMenu()
   {
     SceneManager.UnloadScene(SceneManager.GetActiveScene());
     SceneManager.LoadScene("WelcomeScene");
+  }
+
+  public void LoadScores()
+    {
+    SceneManager.LoadScene("ScoreScene");
   }
 
 }
