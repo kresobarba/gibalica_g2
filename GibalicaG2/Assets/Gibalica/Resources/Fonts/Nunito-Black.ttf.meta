@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 39b8bd4177f9ba146b24d8b154255950
+guid: f37ece9a0b14fde419d716a0a8f0b1b9
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,8 +9,9 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Fredoka One
-  fallbackFontReferences: []
+  - Nunito
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b9083a3193db7464b9f8ae1403e023fd, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

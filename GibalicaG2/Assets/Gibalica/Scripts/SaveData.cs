@@ -12,7 +12,7 @@ public class SaveData : MonoBehaviour
 
   public void Start()
    {
-    normalFont = Resources.Load("Fonts/FredokaOne-Regular") as Font;
+    normalFont = Resources.Load("Fonts/Nunito-Black") as Font;
     specialFont = Resources.Load("Fonts/Arial") as Font;
     ReadFromJson();
    }

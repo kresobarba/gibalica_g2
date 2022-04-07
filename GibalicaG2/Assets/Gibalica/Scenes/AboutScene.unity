@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 171409327}
   - component: {fileID: 171409326}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: Supervisor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 39b8bd4177f9ba146b24d8b154255950, type: 3}
+    m_Font: {fileID: 12800000, guid: f37ece9a0b14fde419d716a0a8f0b1b9, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 218757713}
   - component: {fileID: 218757712}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 39b8bd4177f9ba146b24d8b154255950, type: 3}
+    m_Font: {fileID: 12800000, guid: f37ece9a0b14fde419d716a0a8f0b1b9, type: 3}
     m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GIbalica
+  m_Text: Gibalica
 --- !u!222 &218757713
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -456,10 +456,10 @@ RectTransform:
   - {fileID: 306647517}
   - {fileID: 681095684}
   - {fileID: 1973996810}
-  - {fileID: 1020317492}
   - {fileID: 1470638168}
   - {fileID: 1382899190}
   - {fileID: 1292560180}
+  - {fileID: 1020317492}
   - {fileID: 1391408872}
   - {fileID: 218757711}
   - {fileID: 171409325}
@@ -1139,7 +1139,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 39b8bd4177f9ba146b24d8b154255950, type: 3}
+    m_Font: {fileID: 12800000, guid: f37ece9a0b14fde419d716a0a8f0b1b9, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -1356,7 +1356,7 @@ GameObject:
   - component: {fileID: 1020317494}
   - component: {fileID: 1020317493}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Team
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1374,7 +1374,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 297841064}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1402,7 +1402,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 39b8bd4177f9ba146b24d8b154255950, type: 3}
+    m_Font: {fileID: 12800000, guid: f37ece9a0b14fde419d716a0a8f0b1b9, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -1516,7 +1516,7 @@ RectTransform:
   m_Children:
   - {fileID: 496873831}
   m_Father: {fileID: 297841064}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1649,7 +1649,7 @@ RectTransform:
   m_Children:
   - {fileID: 624544912}
   m_Father: {fileID: 297841064}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1762,7 +1762,7 @@ GameObject:
   - component: {fileID: 1391408874}
   - component: {fileID: 1391408873}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1808,7 +1808,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 39b8bd4177f9ba146b24d8b154255950, type: 3}
+    m_Font: {fileID: 12800000, guid: f37ece9a0b14fde419d716a0a8f0b1b9, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -1956,7 +1956,7 @@ RectTransform:
   m_Children:
   - {fileID: 986476628}
   m_Father: {fileID: 297841064}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
