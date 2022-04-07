@@ -13,13 +13,15 @@ public class DayNightController : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-      cooldown=Time.timeAsDouble;
+    cooldown = Time.timeAsDouble;
+    dayImage.gameObject.SetActive(false);
+    dayImage.gameObject.SetActive(false);
   }
 
   // Update is called once per frame
   void Update()
   {
-    if (Time.time > cooldown)
+    if (Time.timeAsDouble > cooldown)
     {
       TriggerNewChange();
     }
@@ -27,33 +29,43 @@ public class DayNightController : MonoBehaviour
 
   bool IsDay()
   {
-    if (Random.Range(0f, 10.0f) > 5)
+    if (Random.Range(0.0f, 10.0f) > 5.0f)
     {
       return true;
     }
     return false;
   }
 
-///Fade between the day and night images
+  ///Fade between the day and night images
   void TriggerNewChange()
   {
     cooldown += Random.Range(0f, 10.0f);
     bool day = IsDay();
     if (day)
     {
-      dayImage.CrossFadeAlpha(0, 0, true);
-      dayImage.gameObject.SetActive(false);
-      dayImage.CrossFadeAlpha(1, 1, false);
-      nightImage.gameObject.SetActive(false);
-      nightImage.CrossFadeAlpha(0, 0, true);
+      FadeInDay();
     }
     else
     {
-      nightImage.CrossFadeAlpha(0, 0, true);
-      nightImage.gameObject.SetActive(false);
-      nightImage.CrossFadeAlpha(1, 1, false);
-      dayImage.gameObject.SetActive(false);
-      dayImage.CrossFadeAlpha(0, 0, true);
+      FadeInNight();
     }
+  }
+
+  void FadeInDay()
+  {
+    dayImage.CrossFadeAlpha(0, 0, true);
+    dayImage.gameObject.SetActive(true);
+    dayImage.CrossFadeAlpha(1, 1, false);
+    dayImage.CrossFadeAlpha(0, 1, false);
+    dayImage.gameObject.SetActive(false);
+  }
+
+  void FadeInNight()
+  {
+    nightImage.CrossFadeAlpha(0, 0, true);
+    nightImage.gameObject.SetActive(true);
+    nightImage.CrossFadeAlpha(1, 1, false);
+    nightImage.CrossFadeAlpha(0, 1, false);
+    nightImage.gameObject.SetActive(false);
   }
 }
