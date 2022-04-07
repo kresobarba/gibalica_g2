@@ -381,7 +381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &200536681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -785,8 +785,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _squatLegRatio: 1
   _standingLegRatio: 2
+  _enableDebugLog: 0
   isSquat: 0
   repCount: 0
+  ankle_l: 0
+  ankle_r: 0
+  diff_l: 0
+  diff_r: 0
   debugLog: {fileID: 1036642897}
 --- !u!1 &638479256
 GameObject:

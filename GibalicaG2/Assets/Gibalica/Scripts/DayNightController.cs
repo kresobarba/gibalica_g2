@@ -7,8 +7,17 @@ public class DayNightController : MonoBehaviour
 
   [SerializeField] UnityEngine.UI.Image dayImage;
   [SerializeField] UnityEngine.UI.Image nightImage;
+  [SerializeField] Mediapipe.Unity.SquatMeter _squatMeter;
   public double cooldown = 0;
   public bool isDay = true;
+  /// <summary>
+  /// Sucessful poses
+  /// </summary>
+  public int pass = 0;
+  /// <summary>
+  /// Failed poses
+  /// </summary>
+  public int fail = 0;
 
   // Start is called before the first frame update
   void Start()
@@ -44,10 +53,26 @@ public class DayNightController : MonoBehaviour
     if (day)
     {
       FadeInDay();
+      if (!_squatMeter.isSquat)
+      {
+        pass++;
+      }
+      else
+      {
+        fail++;
+      }
     }
     else
     {
       FadeInNight();
+      if (_squatMeter.isSquat)
+      {
+        pass++;
+      }
+      else
+      {
+        fail++;
+      }
     }
   }
 

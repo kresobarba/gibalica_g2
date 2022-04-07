@@ -9,6 +9,7 @@ namespace Mediapipe.Unity
 {
   public class SquatMeter : MonoBehaviour
   {
+    //Important model keypoints
     const int LEFT_HIP = 23;
     const int RIGHT_HIP = 24;
     const int LEFT_KNEE = 25;
@@ -16,13 +17,14 @@ namespace Mediapipe.Unity
     const int LEFT_ANKLE = 27;
     const int RIGHT_ANKLE = 28;
 
+    // Serializable for saving the state
     [SerializeField] public float _squatLegRatio = 1.5f;
     [SerializeField] public float _standingLegRatio = 2.0f;
-    public bool isSquat = false;
-    public int repCount = 0;
-
     [SerializeField] public bool _enableDebugLog=false;
 
+    // Set fields to public for easy debugging and hooking into the script
+    public bool isSquat = false;
+    public int repCount = 0;
 
     public float ankle_l;
     public float ankle_r;
@@ -56,6 +58,7 @@ namespace Mediapipe.Unity
           this.isSquat = true;
           repCount++;
           RaiseOnRep();
+          //EventManager.sad
         }
       }
       else

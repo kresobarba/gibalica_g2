@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UIModeResolver : MonoBehaviour
 {
-    private const float DarkGrey = 0.07f;
+    private const float DarkGrey = 0.1132f; //0.07f;
     private readonly Color _darkGrey = new Color(DarkGrey, DarkGrey, DarkGrey, 1);
 
     public void ResolveMode(bool darkTheme, SettingsFile settings)

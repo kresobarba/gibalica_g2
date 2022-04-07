@@ -157,8 +157,8 @@ MonoBehaviour:
     type: 3}
   _defaultImageSource: 0
   _preferableInferenceMode: 0
-  _assetLoaderType: 0
-  _enableGlog: 1
+  _assetLoaderType: 2
+  _enableGlog: 0
 --- !u!4 &542027324
 Transform:
   m_ObjectHideFlags: 0

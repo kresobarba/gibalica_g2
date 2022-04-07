@@ -42,9 +42,9 @@ public class UIManager : MonoBehaviour
     SceneManager.LoadScene("DayNightScene");
   }
 
-  public void BackToMenu()
+  public async void BackToMenu()
   {
-    SceneManager.UnloadScene(SceneManager.GetActiveScene());
+    SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
     SceneManager.LoadScene("WelcomeScene");
   }
 
