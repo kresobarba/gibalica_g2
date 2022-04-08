@@ -77,11 +77,12 @@ public class DayNightController : MonoBehaviour
         fail++;
       }
     }
-    UpdateScore();
+    StartCoroutine(UpdateScore());
   }
 
-  void UpdateScore()
+  IEnumerator UpdateScore()
   {
+    yield return new WaitForSeconds(1);
     if(scoreText!=null)
     {
       scoreText.text = $"{pass} - {fail}";

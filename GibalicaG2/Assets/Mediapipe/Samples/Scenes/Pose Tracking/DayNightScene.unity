@@ -395,7 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _squatLegRatio: 1
   _standingLegRatio: 2
-  _enableDebugLog: 1
+  _enableDebugLog: 0
   isSquat: 0
   repCount: 0
   ankle_l: 0
@@ -2574,7 +2574,7 @@ MonoBehaviour:
   nightImage: {fileID: 1329478414}
   _squatMeter: {fileID: 216270865}
   scoreText: {fileID: 1183543501}
-  cooldown: 0
+  cooldown: 5
   isDay: 0
   pass: 0
   fail: 0
