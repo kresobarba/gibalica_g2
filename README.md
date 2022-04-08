@@ -60,7 +60,7 @@ The following accessibility features are implemented to ease the use for people 
 
 Pose detection and classification are achieved by MediaPipe libraries. MediaPipe Pose is a ML solution for high fidelity body pose tracking, inferring 33 3D landmarks. The landmarks are used for classifying the pose.
 
-In our application the squat is detected by using MediaPipe GHUM model. The application detects the landmarks for the hips and the knees and checks if they are close together. If the distance is smaller than the specified threshold, the pose is classified as a squat. Otherwise, it is assumed that the user is standing. The landmarks of the knees are used as control variables, to assure that the whole body of the user is visible and not to close to the camera.
+In our application the squat is detected by using MediaPipe GHUM model. The application detects the landmarks for the hips and the knees and checks if they are close together. If the distance is smaller than the specified threshold, the pose is classified as a squat. Otherwise, it is assumed that the user is standing. The landmarks of the ankles are used as control variables, to assure that the whole body of the user is visible and not to close to the camera.
 
 ## Team
 
