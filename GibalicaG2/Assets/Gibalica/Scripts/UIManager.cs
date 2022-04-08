@@ -28,13 +28,12 @@ public class UIManager : MonoBehaviour
 
   public void LoadFreeMode()
   {
-    //SceneManager.LoadScene("FreeModeScene");
-    LoadDayNight();
+    SceneManager.LoadScene("FreeModeScene");
   }
 
   public void LoadTimedMode()
   {
-    LoadDayNight();
+    SceneManager.LoadScene("FreeModeScene");
   }
 
   public void LoadDayNight()
@@ -44,7 +43,7 @@ public class UIManager : MonoBehaviour
 
   public async void BackToMenu()
   {
-    SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+    //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
     SceneManager.LoadScene("WelcomeScene");
   }
 
