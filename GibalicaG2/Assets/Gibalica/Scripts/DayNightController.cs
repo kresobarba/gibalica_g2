@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DayNightController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class DayNightController : MonoBehaviour
   [SerializeField] UnityEngine.UI.Image dayImage;
   [SerializeField] UnityEngine.UI.Image nightImage;
   [SerializeField] Mediapipe.Unity.SquatMeter _squatMeter;
+  [SerializeField] public Text scoreText;
+
   public double cooldown = 0;
   public bool isDay = true;
   /// <summary>
@@ -49,8 +52,8 @@ public class DayNightController : MonoBehaviour
   void TriggerNewChange()
   {
     cooldown += Random.Range(0f, 10.0f);
-    bool day = IsDay();
-    if (day)
+    isDay = IsDay();
+    if (isDay)
     {
       FadeInDay();
       if (!_squatMeter.isSquat)
@@ -74,23 +77,38 @@ public class DayNightController : MonoBehaviour
         fail++;
       }
     }
+    UpdateScore();
+  }
+
+  void UpdateScore()
+  {
+    if(scoreText!=null)
+    {
+      scoreText.text = $"{pass} - {fail}";
+    }
   }
 
   void FadeInDay()
   {
-    dayImage.CrossFadeAlpha(0, 0, true);
+    /* dayImage.CrossFadeAlpha(0, 0, true);
     dayImage.gameObject.SetActive(true);
     dayImage.CrossFadeAlpha(1, 1, false);
     dayImage.CrossFadeAlpha(0, 1, false);
-    dayImage.gameObject.SetActive(false);
+    dayImage.gameObject.SetActive(false); */
+
+    nightImage.gameObject.SetActive(false);
+    dayImage.gameObject.SetActive(true);
   }
 
   void FadeInNight()
   {
-    nightImage.CrossFadeAlpha(0, 0, true);
+    /* nightImage.CrossFadeAlpha(0, 0, true);
     nightImage.gameObject.SetActive(true);
-    nightImage.CrossFadeAlpha(1, 1, false);
-    nightImage.CrossFadeAlpha(0, 1, false);
-    nightImage.gameObject.SetActive(false);
+    nightImage.CrossFadeAlpha(1, 100, false);
+    nightImage.CrossFadeAlpha(0, 100, false);
+    nightImage.gameObject.SetActive(false); */
+
+    dayImage.gameObject.SetActive(false);
+    nightImage.gameObject.SetActive(true);
   }
 }

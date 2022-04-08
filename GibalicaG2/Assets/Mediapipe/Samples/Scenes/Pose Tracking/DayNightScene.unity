@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _squatMeter: {fileID: 216270865}
-  scoreText: {fileID: 1183543501}
+  scoreText: {fileID: 0}
 --- !u!4 &570765243
 Transform:
   m_ObjectHideFlags: 0
@@ -1539,7 +1539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.6784314, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.6784314, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2134,7 +2134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.061081134, g: 0.04045035, b: 0.084905684, a: 1}
+  m_Color: {r: 0.061081134, g: 0.04045035, b: 0.084905684, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2510,6 +2510,7 @@ MonoBehaviour:
   dayImage: {fileID: 873529400}
   nightImage: {fileID: 1329478414}
   _squatMeter: {fileID: 216270865}
+  scoreText: {fileID: 1183543501}
   cooldown: 0
   isDay: 0
   pass: 0

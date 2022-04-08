@@ -13,13 +13,23 @@ public class ScoreController : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    scoreText.text = $"Score: 0";
+    if(scoreText!=null)
+        {
+          scoreText.text = $"Score: {_squatMeter?.repCount}";
+        }
+        else
+        {
+          Debug.LogWarning("No score Text gameobject bound!");
+        }
   }
 
   // Update is called once per frame
   void Update()
   {
-        scoreText.text = $"Score: {_squatMeter?.repCount}";
+        if(scoreText!=null)
+        {
+          scoreText.text = $"Score: {_squatMeter?.repCount}";
+        }
   }
 
   void OnRepIncrease(int reps)
